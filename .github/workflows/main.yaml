@@ -14,6 +14,7 @@ jobs:
           java -version
           javac -version
           javac -cp "junit-4.10.jar:." *.java
+
   calcadd:
     runs-on: ubuntu-latest
     container: openjdk
@@ -23,7 +24,8 @@ jobs:
         run: |
           javac -cp "junit-4.10.jar:." *.java
           java -cp "junit-4.10.jar:." org.junit.runner.JUnitCore TestAdd
-  calcadd:
+
+  calcsub:
     runs-on: ubuntu-latest
     container: openjdk
     steps:
@@ -31,4 +33,4 @@ jobs:
       - name: Test Sub
         run: |
           javac -cp "junit-4.10.jar:." *.java
-          java -cp "junit-4.10.jar:." org.junit.runner.JUnitCore TestAdd
+          java -cp "junit-4.10.jar:." org.junit.runner.JUnitCore TestSub
